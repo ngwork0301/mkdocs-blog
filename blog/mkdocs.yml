@@ -1,5 +1,31 @@
 site_name: NGW's weblog
-theme: material
+site_url: https://ngwork0301.github.io
+site_author: NGW
+# copyright: 'Copyright © 2021 NGW.'
+
+theme:
+  name: material
+  language: ja
+  features:
+    tabs: true
+  palette:
+    accent: Black
+    primary: Black
+  extra:
+    search:
+        language: 'ja'
+  icon:
+    logo: material/school
+    repo: fontawesome/brands/git-alt
+
+extra:
+  social:
+    - icon: fontawesome/brands/github-alt
+      link: https://github.com/fereria
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/fereria
+    - icon: fontawesome/solid/bookmark
+      link: https://zenn.dev/remiria
 
 markdown_extensions:
     - meta
@@ -39,18 +65,4 @@ google_analytics:
   - 'UA-XXXXXXXX-X'
   - 'auto'
 
-# コメント欄
-extra:
-  disqus: '<shortname>'
 
-# タブ表示
-theme:
-  name: material
-  feature:
-    tabs: true
-  palette:
-    accent: Black
-    primary: Black
-  extra:
-    search:
-        language: 'ja'
