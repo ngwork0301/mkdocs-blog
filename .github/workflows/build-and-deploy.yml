@@ -1,0 +1,79 @@
+# .github/workflows/build_and_deploy.yml
+name: Build and Deploy
+
+on:
+  push:
+    branches: master
+
+jobs:
+  build-and-deploy:
+    name: Build static pages and deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.8'
+
+      - name: Cache dependencies
+        uses: actions/cache@v2
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
+
+      - name: Install dependencies
+        run: |
+          python3 -m pip install --upgrade pip
+          python3 -m pip install -r ./requirements.txt
+      
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Checkout submodules
+        run: |
+          auth_header="$(git config --local --get http.https://github.com/.extraheader)"
+          git submodule sync --recursive
+          git -c "http.extraheader=$auth_header" -c protocol.version=2 submodule update --init --force --recursive --depth=1
+
+      - name: Setup git repogitories
+        env:
+          GITHUB_IO_REPO_DEPLOY_KEY: ${{ secrets.GH_IO_REPO_DEPLOY_KEY }}
+        run: |
+          echo "$GH_IO_REPO_DEPLOY_KEY" > ~/deploy_key.pem
+          chmod 600 ~/deploy_key.pem
+          git config --global user.email "tnkngw29@gmail.com"
+          git config --global user.name "NGW"
+          cd public
+          git config remote.origin.url "https://github.com/ngwork0301/ngwork0301.github.io.git"
+          git checkout master
+
+      - name: Build pages
+        run: hugo
+
+      - name: Deploy pages
+        env:
+          GIT_SSH_COMMAND: ssh -i ~/deploy_key.pem -o StrictHostKeyChecking=no -F /dev/null
+        run: |
+          cd site
+          git add -A
+          if ! git diff --cached --quiet; then
+            git commit -m "Deploy $GITHUB_SHA by GitHub Actions"
+            git pull origin master
+            git push origin master
+          fi
+
+      - name: Update dependency of submodule
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git add site
+          if ! git diff --cached --quiet; then
+            origin=https://${GITHUB_ACTOR}:${GITHUB_TOKEN}@github.com/ngwork0301/mkdocs-blog.git
+            git commit -m "Update dependency of submodule"
+            git pull $origin master
+            git push $origin master
+          fi
+# refs
+# - actions/checkout@v2 and submodule update
+#   https://github.com/actions/checkout/tree/c85684db76ba6ef08713c10cf4befe3318887415#checkout-submodules
