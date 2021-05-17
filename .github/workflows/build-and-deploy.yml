@@ -52,7 +52,9 @@ jobs:
           git checkout master
 
       - name: Build pages
-        run: mkdocs build
+        run: |
+          cd blog
+          mkdocs build
 
       - name: Deploy pages
         env:
