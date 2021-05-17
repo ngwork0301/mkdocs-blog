@@ -47,7 +47,7 @@ jobs:
           chmod 600 ~/deploy_key.pem
           git config --global user.email "tnkngw29@gmail.com"
           git config --global user.name "NGW"
-          cd site
+          cd blog/site
           git config remote.origin.url "https://github.com/ngwork0301/ngwork0301.github.io.git"
           git checkout master
 
@@ -58,7 +58,7 @@ jobs:
         env:
           GIT_SSH_COMMAND: ssh -i ~/deploy_key.pem -o StrictHostKeyChecking=no -F /dev/null
         run: |
-          cd site
+          cd blog/site
           git add -A
           if ! git diff --cached --quiet; then
             git commit -m "Deploy $GITHUB_SHA by GitHub Actions"
@@ -70,7 +70,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          git add site
+          git add blog/site
           if ! git diff --cached --quiet; then
             origin=https://${GITHUB_ACTOR}:${GITHUB_TOKEN}@github.com/ngwork0301/mkdocs-blog.git
             git commit -m "Update dependency of submodule"
