@@ -52,7 +52,7 @@ jobs:
           git checkout master
 
       - name: Build pages
-        run: hugo
+        run: mkdocs build
 
       - name: Deploy pages
         env:
