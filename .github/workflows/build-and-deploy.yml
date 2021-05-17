@@ -47,7 +47,7 @@ jobs:
           chmod 600 ~/deploy_key.pem
           git config --global user.email "tnkngw29@gmail.com"
           git config --global user.name "NGW"
-          cd public
+          cd site
           git config remote.origin.url "https://github.com/ngwork0301/ngwork0301.github.io.git"
           git checkout master
 
