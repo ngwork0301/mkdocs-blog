@@ -24,13 +24,6 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-pip-
 
-      - name: Install dependencies
-        run: |
-          pwd
-          ls -l
-          python3 -m pip install --upgrade pip
-          python3 -m pip install -r ./requirements.txt
-      
       - name: Checkout
         uses: actions/checkout@v2
       - name: Checkout submodules
@@ -39,6 +32,13 @@ jobs:
           git submodule sync --recursive
           git -c "http.extraheader=$auth_header" -c protocol.version=2 submodule update --init --force --recursive --depth=1
 
+      - name: Install dependencies
+        run: |
+          pwd
+          ls -l
+          python3 -m pip install --upgrade pip
+          python3 -m pip install -r ./requirements.txt
+      
       - name: Setup git repogitories
         env:
           GITHUB_IO_REPO_DEPLOY_KEY: ${{ secrets.GH_IO_REPO_DEPLOY_KEY }}
