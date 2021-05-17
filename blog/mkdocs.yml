@@ -68,5 +68,5 @@ extra_javascript:
 plugins:
     - redirects:
         redirect_maps:
-            'index.md': 'about.md'
+            'index.md': '2021/test.md'
 
