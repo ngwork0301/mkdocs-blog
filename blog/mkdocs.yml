@@ -61,12 +61,12 @@ extra_css:
 extra_javascript: 
   - http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
 
-# google_analytics:
-#   - 'UA-XXXXXXXX-X'
-#   - 'auto'
+google_analytics:
+  - 'UA-197500322-1'
+  - 'auto'
 
 plugins:
     - redirects:
         redirect_maps:
-            'index.md': '2021/test.md'
+            'index.md': '2021/python-debug-gdb.md'
 
