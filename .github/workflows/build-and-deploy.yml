@@ -27,19 +27,20 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Checkout submodules
+        shell: bash -xe {0} # custom shell
         run: |
           auth_header="$(git config --local --get http.https://github.com/.extraheader)"
           git submodule sync --recursive
           git -c "http.extraheader=$auth_header" -c protocol.version=2 submodule update --init --force --recursive --depth=1
 
       - name: Install dependencies
+        shell: bash -xe {0} # custom shell
         run: |
-          pwd
-          ls -l
           python3 -m pip install --upgrade pip
           python3 -m pip install -r ./requirements.txt
       
       - name: Setup git repogitories
+        shell: bash -xe {0} # custom shell
         env:
           GITHUB_IO_REPO_DEPLOY_KEY: ${{ secrets.GH_IO_REPO_DEPLOY_KEY }}
         run: |
@@ -48,7 +49,7 @@ jobs:
           git config --global user.email "tnkngw29@gmail.com"
           git config --global user.name "NGW"
           cd blog/site
-          git config remote.origin.url "https://github.com/ngwork0301/ngwork0301.github.io.git"
+          git remote set-url origin git@github.com:ngwork0301/ngwork0301.github.io.git
           git checkout master
 
       - name: Build pages
@@ -57,6 +58,7 @@ jobs:
           mkdocs build
 
       - name: Deploy pages
+        shell: bash -xe {0} # custom shell
         env:
           GIT_SSH_COMMAND: ssh -i ~/deploy_key.pem -o StrictHostKeyChecking=no -F /dev/null
         run: |
@@ -69,6 +71,7 @@ jobs:
           fi
 
       - name: Update dependency of submodule
+        shell: bash -xe {0} # custom shell
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
