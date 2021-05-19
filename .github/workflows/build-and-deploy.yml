@@ -82,6 +82,18 @@ jobs:
             git pull $origin master
             git push $origin master
           fi
+
+  slack-notify:
+    if: always()
+    needs: [build-and-deploy]
+    name: workflow notification to slack
+    runs-on: ubuntu-latest
+    steps:
+      - uses: Gamesight/slack-workflow-status@master
+        with:
+          repo_token: ${{ secrets.GITHUB_TOKEN }}
+          slack_webhook_url: ${{ secrets.SLACK_WEBHOOK_URL }}
+
 # refs
 # - actions/checkout@v2 and submodule update
 #   https://github.com/actions/checkout/tree/c85684db76ba6ef08713c10cf4befe3318887415#checkout-submodules

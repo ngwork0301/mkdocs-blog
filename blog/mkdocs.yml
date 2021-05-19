@@ -66,6 +66,13 @@ google_analytics:
   - 'auto'
 
 plugins:
+    - search:
+        lang:
+          - en
+          - ja
+    - git-revision-date-localized:
+        type: 
+          iso_datetime
     - redirects:
         redirect_maps:
             'index.md': '2021/python-debug-gdb.md'
