@@ -21,11 +21,11 @@ theme:
 extra:
   social:
     - icon: fontawesome/brands/github-alt
-      link: https://github.com/fereria
+      link: https://github.com/ngwork0301
     - icon: fontawesome/brands/twitter
-      link: https://twitter.com/fereria
+      link: https://twitter.com/ngwork0301
     - icon: fontawesome/solid/bookmark
-      link: https://zenn.dev/remiria
+      link: https://zenn.dev/ngw
 
 markdown_extensions:
     - meta
@@ -76,4 +76,3 @@ plugins:
     - redirects:
         redirect_maps:
             'index.md': '2021/python-debug-gdb.md'
-
