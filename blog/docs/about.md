@@ -4,6 +4,11 @@
 
 ## 書いている人
 * NGW
+  * [github](https://github.com/ngwork0301)
+  * [twitter](https://twitter.com/ngwork0301)
+  * [Zenn](https://zenn.dev/ngw)
+  * [teratail](https://teratail.com/users/NGW)
+  * [Qiita](https://qiita.com/NGW)
 * ソフトウェアエンジニア
 * 36歳
 * 短期受託開発の会社で働いている
