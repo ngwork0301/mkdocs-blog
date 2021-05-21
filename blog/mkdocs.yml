@@ -44,7 +44,8 @@ markdown_extensions:
         use_pygments: true
         noclasses: true
         pygments_style: monokai
-
+    - mdx_truly_sane_lists:
+        nested_indent: 2
 
 extra_css:
     - "https://fonts.googleapis.com/earlyaccess/notosansjp.css"
