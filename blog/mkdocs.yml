@@ -18,15 +18,6 @@ theme:
     logo: material/school
     repo: fontawesome/brands/git-alt
 
-extra:
-  social:
-    - icon: fontawesome/brands/github-alt
-      link: https://github.com/ngwork0301
-    - icon: fontawesome/brands/twitter
-      link: https://twitter.com/ngwork0301
-    - icon: fontawesome/solid/bookmark
-      link: https://zenn.dev/ngw
-
 markdown_extensions:
     - meta
     - admonition
@@ -47,17 +38,22 @@ markdown_extensions:
     - mdx_truly_sane_lists:
         nested_indent: 2
 
-extra_css:
-    - "https://fonts.googleapis.com/earlyaccess/notosansjp.css"
-    - "https://fonts.googleapis.com/css?family=Open+Sans:600,800"
-    - "https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css"
-    
-
 extra:
     font:
         text: "Noto Sans JP"
         code: "Consolas"
+    social:
+      - icon: fontawesome/brands/github
+        link: https://github.com/ngwork0301
+      - icon: fontawesome/brands/twitter
+        link: https://twitter.com/ngwork0301
+      - icon: fontawesome/solid/bookmark
+        link: https://zenn.dev/ngw
+
 extra_css:
+    - "https://fonts.googleapis.com/earlyaccess/notosansjp.css"
+    - "https://fonts.googleapis.com/css?family=Open+Sans:600,800"
+    - "https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css"
 
 extra_javascript: 
   - http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
