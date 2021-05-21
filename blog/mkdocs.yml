@@ -23,6 +23,7 @@ markdown_extensions:
     - admonition
     - pymdownx.magiclink
     - fontawesome_markdown
+    - footnotes
     - def_list
     - mdx_math:
         enable_dollar_delimiter: true
