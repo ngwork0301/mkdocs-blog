@@ -14,9 +14,6 @@ theme:
   extra:
     search:
         language: 'ja'
-  icon:
-    logo: material/school
-    repo: fontawesome/brands/git-alt
 
 markdown_extensions:
     - meta
@@ -55,6 +52,7 @@ extra_css:
     - "https://fonts.googleapis.com/earlyaccess/notosansjp.css"
     - "https://fonts.googleapis.com/css?family=Open+Sans:600,800"
     - "https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css"
+    - "css/custom.css"
 
 extra_javascript: 
   - http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
