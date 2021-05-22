@@ -1,10 +1,8 @@
 # About
------
 
 このブログで述べられている内容はすべて私の個人的な意見に基づくものです。誤記やご意見等は **[GitHub Issue](https://github.com/ngwork0301/ngwork0301.github.io/issues)** または **[twitter](https://twitter.com/ngwork0301)** へご連絡ください。
 
 ## 書いている人
------
 * **NGW**  
     ![Screenshot](img/ngwicon.png)  
 * ソフトウェアエンジニア
