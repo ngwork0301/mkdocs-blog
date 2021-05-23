@@ -5,12 +5,14 @@ site_author: NGW
 
 theme:
   name: material
-  language: ja
+  language: 'ja'
   features:
     tabs: true
   palette:
     accent: Black
     primary: Black
+  features:
+    - search.suggest
   extra:
     search:
         language: 'ja'
@@ -18,7 +20,6 @@ theme:
 markdown_extensions:
     - meta
     - admonition
-    - pymdownx.magiclink
     - fontawesome_markdown
     - footnotes
     - def_list
@@ -26,8 +27,9 @@ markdown_extensions:
         enable_dollar_delimiter: true
     - pymdownx.emoji:
         emoji_generator: !!python/name:pymdownx.emoji.to_svg
-    - pymdownx.smartsymbols
     - pymdownx.keys
+    - pymdownx.smartsymbols
+    - pymdownx.magiclink
     - pymdownx.highlight:
         linenums: true
         use_pygments: true
@@ -64,8 +66,8 @@ google_analytics:
 plugins:
     - search:
         lang:
-          - en
           - ja
+        prebuild_index: true
     - git-revision-date-localized:
         type: 
           iso_datetime
