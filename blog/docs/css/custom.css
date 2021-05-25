@@ -21,13 +21,40 @@
   color: rgba(102,217,224,1);
 }
 
+.md-typeset > ::before {
+  font-family: "FontAwesome";
+  margin-right: .3em;
+  display: inline-block !important;
+}
+
 .md-typeset h1 {
   font-size: 24pt;
   /* font-weight: bold; */
   color: #000;
   /* border-bottom: solid 2px #f18b21; */
-  padding-bottom: 5px;
+  /* padding-bottom: 5px; */
 }
+
 .md-typeset h2 {
   border-bottom: 1px dotted #888;
+}
+.md-typeset h3 {
+  font-weight: bold;
+  border-bottom: 1px dotted #757575;
+}
+.md-typeset h4 {
+  font-weight: bold;
+  border-bottom: 1px solid hsla(0, 0%, 92.5%, .5);
+}
+
+.md-typeset h2::before {
+  content: "\f0a9" !important;
+}
+
+.md-typeset h3::before {
+  content:"\f061" !important;
+}
+
+.md-typeset h4::before {
+  content:"\f0da" !important;
 }
