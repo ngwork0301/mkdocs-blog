@@ -1,6 +1,7 @@
 site_name: NGW's weblog
 site_url: https://ngwork0301.github.io
 site_author: NGW
+site_description: このサイトはNGWのブログです。このブログで述べられている内容はすべて私の個人的な意見に基づくものです。誤記やご意見等はGithub issueまたはtwitterへご連絡ください。
 # copyright: 'Copyright © 2021 NGW.'
 
 theme:
@@ -11,6 +12,7 @@ theme:
   palette:
     accent: Black
     primary: Black
+  custom_dir: overrides
   features:
     - search.suggest
   extra:
@@ -49,6 +51,8 @@ extra:
         link: https://twitter.com/ngwork0301
       - icon: fontawesome/solid/bookmark
         link: https://zenn.dev/ngw
+      - icon: fontawesome/solid/rss
+        link: https://ngwork0301.github.io/feed_rss_created.xml
 
 extra_css:
     - "https://fonts.googleapis.com/earlyaccess/notosansjp.css"
@@ -74,3 +78,4 @@ plugins:
     - redirects:
         redirect_maps:
             'index.md': '2021/python-debug-gdb.md'
+    - rss:
