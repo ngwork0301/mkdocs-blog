@@ -53,6 +53,8 @@ jobs:
           git checkout master
 
       - name: Build pages
+        env:
+          TZ: Asia/Tokyo
         run: |
           cd blog
           mkdocs build
