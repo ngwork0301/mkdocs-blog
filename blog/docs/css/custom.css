@@ -47,9 +47,9 @@
   border-bottom: 1px solid hsla(0, 0%, 92.5%, .5);
 }
 
-.md-typeset h2::before {
+/* .md-typeset h2::before {
   content: "\f0a9" !important;
-}
+} */
 
 .md-typeset h3::before {
   content:"\f061" !important;
