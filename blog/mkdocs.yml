@@ -77,6 +77,6 @@ plugins:
           iso_datetime
     - redirects:
         redirect_maps:
-            'index.md': '2021/devsumi2021summer-minodriven.md'
+            'index.md': '2021/serverless-single-page-application.md'
     - rss
     - git-revision-date-localized
