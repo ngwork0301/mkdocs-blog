@@ -78,6 +78,6 @@ plugins:
           iso_datetime
     - redirects:
         redirect_maps:
-            'index.md': '2021/serverless-single-page-application.md'
+            'index.md': '2021/invitation-to-engineering-organization-theory.md'
     - rss
     - git-revision-date-localized
