@@ -69,6 +69,8 @@ jobs:
           cd blog/site
           git add -A
           if ! git diff --cached --quiet; then
+            git config pull.rebase true
+            git config pull.ff only
             git commit -m "Deploy $GITHUB_SHA by GitHub Actions"
             git pull origin master
             git push origin master
@@ -81,6 +83,8 @@ jobs:
         run: |
           git add blog/site
           if ! git diff --cached --quiet; then
+            git config pull.rebase true
+            git config pull.ff only
             origin=https://${GITHUB_ACTOR}:${GITHUB_TOKEN}@github.com/ngwork0301/mkdocs-blog.git
             git commit -m "Update dependency of submodule"
             git pull $origin master
