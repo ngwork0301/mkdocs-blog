@@ -39,6 +39,7 @@ jobs:
         shell: bash -xe {0} # custom shell
         run: |
           python3 -m pip install --upgrade pip
+          python3 -m pip install pypandoc==1.7.5
           python3 -m pip install -r ./requirements.txt
       
       - name: Setup git repogitories
