@@ -78,6 +78,6 @@ plugins:
           iso_datetime
     - redirects:
         redirect_maps:
-            'index.md': '2022/zero-osdev-22_31.md'
+            'index.md': '2022/refactoring.md'
     - rss
     - git-revision-date-localized
