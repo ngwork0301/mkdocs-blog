@@ -78,6 +78,6 @@ plugins:
           iso_datetime
     - redirects:
         redirect_maps:
-            'index.md': '2022/introduction_to_domain_driven_design.md'
+            'index.md': '2022/principles_of_the_system_architecture.md'
     - rss
     - git-revision-date-localized
