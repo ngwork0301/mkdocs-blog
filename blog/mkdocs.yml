@@ -78,6 +78,6 @@ plugins:
           iso_datetime
     - redirects:
         redirect_maps:
-            'index.md': '2022/principles_of_the_system_architecture.md'
+            'index.md': '2023/eric-evans-ddd.md'
     - rss
     - git-revision-date-localized
