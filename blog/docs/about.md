@@ -23,4 +23,4 @@
 
 ## :earth_americas: 各種SNS、サービス 
 
-  [:fa-github: github](https://github.com/ngwork0301)　[:fa-twitter: twitter](https://twitter.com/ngwork0301)　[:fa-external-link: Zenn](https://zenn.dev/ngw)　[:fa-external-link: teratail](https://teratail.com/users/NGW) [:grey_question: はてなid](https://profile.hatena.ne.jp/ngwork0301/profile) [:page_facing_up: note](https://note.com/ngwork0301)
+  [:fa-github: github](https://github.com/ngwork0301)　[:fa-twitter: X](https://twitter.com/ngwork0301)　[:butterfly: bluesky](https://bsky.app/profile/ngwork0301.bsky.social)　[:fa-external-link: Zenn](https://zenn.dev/ngw)　[:fa-external-link: teratail](https://teratail.com/users/NGW) [:grey_question: はてなid](https://profile.hatena.ne.jp/ngwork0301/profile) [:page_facing_up: note](https://note.com/ngwork0301)
