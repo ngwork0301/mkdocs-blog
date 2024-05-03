@@ -78,6 +78,6 @@ plugins:
           iso_datetime
     - redirects:
         redirect_maps:
-            'index.md': '2023/textbook-of-operational-design.md'
+            'index.md': '2023/technology-supporting-the-web.md'
     - rss
     - git-revision-date-localized
