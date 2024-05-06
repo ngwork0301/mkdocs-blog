@@ -78,6 +78,6 @@ plugins:
           iso_datetime
     - redirects:
         redirect_maps:
-            'index.md': '2023/what-consulting-learns-in-the-first-three-years.md'
+            'index.md': '2023/the-art-of-asking-questions.md'
     - rss
     - git-revision-date-localized
