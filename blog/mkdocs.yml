@@ -78,6 +78,6 @@ plugins:
           iso_datetime
     - redirects:
         redirect_maps:
-            'index.md': '2023/scrum-bootcamp.md'
+            'index.md': '2024/agile-samurai.md'
     - rss
     - git-revision-date-localized
