@@ -78,6 +78,6 @@ plugins:
           iso_datetime
     - redirects:
         redirect_maps:
-            'index.md': '2024/agile-samurai.md'
+            'index.md': '2024/readable-code.md'
     - rss
     - git-revision-date-localized
